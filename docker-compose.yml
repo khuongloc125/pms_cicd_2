@@ -1,5 +1,5 @@
 
-
+version: '3.8'
 services:
   backend:
     restart: unless-stopped
@@ -101,9 +101,8 @@ services:
   mysql-exporter:
     image: prom/mysqld-exporter:latest
     command:
-      - --mysqld.address=db:3306
-      - --mysqld.username=root
-      - --mysqld.password=123456
+    - --mysqld.address=db:3306
+    - --mysqld.username=root:123456
 
     ports:
       - "9104:9104"
