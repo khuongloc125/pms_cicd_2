@@ -20,7 +20,7 @@ public interface ProjectMapper {
     @Mapping(target = "leader", ignore = true)
     @Mapping(target = "start_date", source = "start_date")
     @Mapping(target = "end_date", source = "end_date")
-    @Mapping(target = "status", constant = "ACTIVE")
+    @Mapping(target = "status", constant = "ACTIVE") // Đặt trạng thái mặc định là ACTIVE
     Project toProject(ProjectCreationRequest request);
 
     ProjectResponse toProjectResponse(Project project);

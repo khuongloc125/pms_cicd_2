@@ -42,6 +42,8 @@ spring:
           characterEncoding: utf8mb4
           useUnicode: true
         dialect: org.hibernate.dialect.MySQL8Dialect
+  # Tắt debug mode toàn cục
+  debug: false
 
   # Google OAuth2
   security:
@@ -73,7 +75,7 @@ logging:
           oauth2: TRACE
         web: DEBUG  
         boot: 
-          autoconfigure: WARN
+          autoconfigure: ERROR  # Nâng lên ERROR để tắt log chi tiết auto-config
     com:
       pms:
         backend: DEBUG
