@@ -71,7 +71,9 @@ logging:
       springframework:
         security:
           oauth2: TRACE
-        web: DEBUG
+        web: DEBUG  
+        boot: 
+          autoconfigure: WARN
     com:
       pms:
         backend: DEBUG
