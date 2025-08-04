@@ -336,7 +336,7 @@ function Login() {
                     onClick={handleLocalLogin}
                     disabled={isLoggingIn}
                   >
-                    LOGIN CICD
+                    LOGIN CICD TEST
                   </button>
                 </div>
                 <div className="err-general">
