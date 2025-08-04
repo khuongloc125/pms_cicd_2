@@ -1,11 +1,8 @@
-name: Java CI/CD with Maven - Build and Deploy WAR Tom cat
+name: Java CI/CD with Maven
 
 on:
   push:
-    branches-ignore: [feature-minhdan]
-    paths:
-      - "src/main/**"
-      - "src/test/**"
+    branches: [feature-minhdan]
 
 jobs:
   build:
