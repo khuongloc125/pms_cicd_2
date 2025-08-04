@@ -21,19 +21,15 @@ jobs:
       - name: Run Unit Tests with Maven
         run: |
           cd backend
-          mvn clean test
-        env:
-          DATASOURCE_URL: jdbc:mysql://localhost:3306/pms
-          DATASOURCE_USERNAME: root
-          DATASOURCE_PASSWORD: 12345
+          mvn clean test -Dspring.profiles.active=test  # Kích hoạt profile test để dùng H2
 
       - name: Build with Maven
         run: |
           cd backend
           mvn package
         env:
-          DATASOURCE_URL: jdbc:mysql://localhost:3306/pms
-          DATASOURCE_USERNAME: root
+          DATASOURCE_URL: jdbc:mysql://localhost:3306/pms?useSSL=false&allowPublicKeyRetrieval=true  # Giữ nếu build cần, nhưng không bắt buộc vì package chỉ compile
+          DATASOURCE_USER: root
           DATASOURCE_PASSWORD: 12345
 
       - name: Upload WAR artifact

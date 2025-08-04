@@ -20,28 +20,17 @@ spring:
       enabled: true
   # MySQL
   datasource:
-    url: ${DATASOURCE_URL}
-    username: ${DATASOURCE_USER}
-    password: ${DATASOURCE_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    hikari:
-      connection-timeout: 30000
-      maximum-pool-size: 10
-      max-lifetime: 1800000
-      connection-init-sql: SELECT 1
-      initialization-fail-timeout: 0
-      minimum-idle: 5
-      idle-timeout: 600000
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL  # In-memory DB, mimic MySQL mode để tương thích query
+    driver-class-name: org.h2.Driver
+    username: root
+    password: 12345
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: true
+      ddl-auto: create-drop  # Tạo schema mới mỗi test, drop sau để clean
+    show-sql: true  # Giữ để debug nếu cần
     properties:
       hibernate:
-        connection:
-          characterEncoding: utf8mb4
-          useUnicode: true
-        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.H2Dialect
   # Tắt debug mode toàn cục
   debug: false
 
