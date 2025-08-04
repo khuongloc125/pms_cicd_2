@@ -73,7 +73,6 @@ public class Sprint {
     @OneToMany(mappedBy = "sprint", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Task> tasks;
 
-    // Thêm phương thức để kiểm tra tính toàn vẹn (tùy chọn)
     @PrePersist
     @PreUpdate
     private void validate() {
