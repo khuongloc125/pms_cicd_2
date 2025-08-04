@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   backend:
@@ -102,7 +102,9 @@ services:
     image: prom/mysqld-exporter:latest
     command:
       - --mysqld.address=db:3306
-      - --mysqld.username=root:123456
+      - --mysqld.username=root
+      - --mysqld.password=123456
+
     ports:
       - "9104:9104"
     depends_on:
@@ -126,3 +128,4 @@ volumes:
   db-data:
   prometheus-data:
   grafana-data:
+
