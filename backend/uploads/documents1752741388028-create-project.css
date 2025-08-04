@@ -1,0 +1,108 @@
+.create-project-container {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+.create-project-header {
+  width: 100%;
+  height: auto;
+  margin-top: -15px;
+  padding: 10px;
+}
+.create-project-title {
+  margin-bottom: 15px;
+}
+.create-project-title h2 {
+  font-size: 34px;
+}
+.create-project-title p {
+  font-size: 18px;
+}
+
+.create-project-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px 0;
+}
+.create-project-input label {
+  font-size: 17px;
+}
+
+.create-project-input input {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgb(180, 180, 180);
+  outline: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.create-project-input input:focus,
+.create-project-input textarea:focus {
+  border: 1px solid #0ca1ce;
+}
+
+.create-project-input textarea {
+  border-radius: 8px;
+  border: 1px solid rgb(180, 180, 180);
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.project-type-group {
+  display: flex;
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  gap: 10px;
+  box-shadow: 1px 1px 1px gray;
+}
+.project-type-group #project-type {
+  transform: scale(1.5);
+  cursor: pointer;
+  margin-top: -20px;
+}
+
+.project-button {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+}
+
+.project-button .btn-add {
+  width: 110px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #0fbaee;
+  border: 1px solid #0fbaee;
+  color: white;
+  font-size: 18px;
+  font-weight: 450;
+  box-shadow: 1px 1px 1px gray;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-button .btn-add:hover {
+  background-color: #11a3cf;
+  transform: translateY(-2px);
+}
+
+.date {
+  display: flex;
+}
+
+.start-date {
+  width: 49%;
+  margin-right: 20px;
+}
+
+.end-date {
+  width: 49%;
+}

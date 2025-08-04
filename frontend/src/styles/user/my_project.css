@@ -1,0 +1,492 @@
+.my-project-container {
+  width: 100%;
+  height: 100vh;
+}
+/* src/styles/project-list.css */
+.my-project-content {
+  flex: 1;
+  padding: 10px 32px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.project-list-container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  margin-bottom: 32px;
+}
+.project-list-container .page-header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.project-list-container .page-title-section {
+  width: 50%;
+}
+
+.project-list-container .page-actions-container {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.section-title {
+  font-size: 2rem !important;
+  font-weight: 600;
+  color: #172b4d;
+  margin-bottom: 0px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #dfe1e6;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+  height: 230px;
+}
+
+.project-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-color: #b3d4ff;
+}
+
+.project-card-title {
+  font-weight: 600;
+  color: #172b4d;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-card-description {
+  color: #6b778c;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: -8px 0 5px 0;
+}
+
+.project-type-badge {
+  padding: 0px 2px 4px 2px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card-date {
+  color: #97a0af;
+  font-size: 12px;
+}
+
+.project-lead .lead-avatar {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 16px;
+  }
+
+  .project-list-container {
+    padding: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .controls-section .controls-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-container,
+  .dropdown {
+    width: 100% !important;
+  }
+}
+/* Thêm vào my_project.css */
+
+.dropdown {
+  position: relative;
+  width: 24%;
+  margin: 0 5px !important;
+}
+
+.dropdown-button {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.dropdown-button.active {
+  border-color: #0052cc;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f4f5f7;
+}
+
+.stats-bar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  background: #f4f5f7;
+  border-radius: 6px;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6b778c;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.view-toggle button {
+  padding: 8px 12px;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.view-toggle button.active {
+  background: #0052cc;
+  color: #fff;
+  border-color: #0052cc;
+}
+
+.btn-create {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primary-create {
+  background: #0052cc;
+  color: #fff;
+  border: none;
+  width: 200px;
+}
+
+.btn-secondary {
+  background: #f4f5f7;
+  color: #172b4d;
+  border: 1px solid #dfe1e6;
+}
+
+.action-menu {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.action-button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background: #f4f5f7;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.confirm-dialog {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.cancel-button,
+.confirm-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background: #f4f5f7;
+  border: 1px solid #dfe1e6;
+}
+
+.confirm-button {
+  background: #0052cc;
+  color: #fff;
+  border: none;
+}
+
+.team-label {
+  font-size: 14px;
+  color: #6b778c;
+  margin-bottom: 8px;
+}
+
+.team-avatars {
+  display: flex;
+  gap: 4px;
+}
+
+.team-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #dfe1e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #172b4d;
+}
+
+.team-more {
+  background: #f4f5f7;
+}
+
+.action-delete-change {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  cursor: pointer;
+}
+
+.loading-state,
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: #6b778c;
+}
+
+.spinner {
+  border: 4px solid #f4f5f7;
+  border-top: 4px solid #0052cc;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.controls-section .controls-left {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.controls-section .controls-left .dropdown {
+  margin: 5px 0;
+}
+.name-button-change {
+  display: flex;
+  width: 100%;
+}
+
+.name-button-change .btn-delete-card {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.btn-delete-card button {
+  width: auto;
+  padding: 5px 5px;
+  border: none;
+  outline: none;
+  background-color: rgba(251, 50, 50, 0.8);
+  color: white;
+  box-shadow: 1px 1px 3px rgb(250, 42, 42, 0.8);
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 8px 0 0 0;
+}
+.btn-delete-card button:hover {
+  background-color: rgba(249, 6, 6, 0.8);
+}
+
+/* Confirmation dialog box */
+.confirm-dialog {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Dialog title */
+.confirm-dialog h3 {
+  margin: 0 0 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Dialog message */
+.confirm-dialog p {
+  margin: 0 0 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Container for buttons */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Cancel button */
+.cancel-button {
+  background: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 5px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.cancel-button:hover {
+  background: #e0e0e0;
+}
+
+/* Confirm button */
+.confirm-button {
+  background: #dc3545; /* Red for destructive action */
+  color: #fff;
+  border: none;
+  padding: 5px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.confirm-button:hover {
+  background: #c82333;
+}
+
+.project-team {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .page-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-header .page-title-section {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .page-header .page-actions-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .controls-section .controls-left {
+    gap: 10px;
+  }
+}

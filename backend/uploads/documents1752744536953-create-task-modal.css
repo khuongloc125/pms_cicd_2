@@ -1,0 +1,250 @@
+
+/* Modal Overlay Styles */
+.create-task-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+}
+
+/* Modal Container Styles */
+.create-task-modal {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal Header Styles */
+.create-task-modal-header {
+    padding: 24px;
+    border-bottom: 1px solid #DFE1E6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-task-modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #172B4D;
+}
+
+/* Close Button Styles */
+.create-task-modal-close {
+    padding: 8px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #6B778C;
+}
+
+.create-task-modal-close:hover {
+    background-color: #F4F5F7;
+}
+
+/* Modal Content Styles */
+.create-task-modal-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Group Styles */
+.create-task-form-group {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.create-task-form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #172B4D;
+    margin-bottom: 8px;
+}
+
+.create-task-form-input,
+.create-task-form-textarea,
+.create-task-form-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #DFE1E6;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.create-task-form-input:focus,
+.create-task-form-textarea:focus,
+.create-task-form-select:focus {
+    border-color: #0052CC;
+}
+
+.create-task-form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Grid Layout for Form Groups */
+.create-task-form-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Form Actions Styles */
+.create-task-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.create-task-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.create-task-btn-primary {
+    background-color: #0052CC;
+    color: #FFFFFF;
+}
+
+.create-task-btn-primary:hover {
+    background-color: #0747A6;
+}
+
+.create-task-btn-secondary {
+    background-color: #F4F5F7;
+    color: #172B4D;
+}
+
+.create-task-btn-secondary:hover {
+    background-color: #DFE1E6;
+}
+
+/* Comment Section Styles */
+.create-task-comment-section {
+    margin-bottom: 24px;
+}
+
+.create-task-comment-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.create-task-comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 256px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+.create-task-comment-item {
+    background-color: #F4F5F7;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.create-task-comment-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.create-task-comment-author {
+    font-weight: 500;
+    font-size: 14px;
+    color: #172B4D;
+}
+
+.create-task-comment-time {
+    font-size: 12px;
+    color: #6B778C;
+}
+
+.create-task-comment-text {
+    font-size: 14px;
+    color: #172B4D;
+}
+
+.create-task-comment-input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.create-task-comment-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #DFE1E6;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.create-task-comment-input:focus {
+    border-color: #0052CC;
+}
+
+.create-task-comment-btn {
+    padding: 8px 16px;
+    background-color: #0052CC;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.create-task-comment-btn:hover {
+    background-color: #0747A6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .create-task-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .create-task-comment-input-group {
+        flex-direction: column;
+    }
+
+    .create-task-comment-input {
+        width: 100%;
+    }
+
+    .create-task-modal {
+        max-width: 90%;
+    }
+}

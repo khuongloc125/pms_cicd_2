@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.progress-bar {
+  position: fixed;
+  margin-top: 0px !important;
+  left: 0;
+  width: 0%;
+  height: 3px !important;
+  background-color: #0349fa !important;
+  display: none;
+  z-index: 1000;
+
+  animation: progressAnimation 1.5s linear infinite;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.homepage-container {
+  width: 100%;
+  height: 100vh;
+}
+.homepage-container .homepage-navbar {
+  display: flex;
+  width: 100%;
+  height: 10%;
+}
+
+.homepage-navbar-logo {
+  width: 20%;
+  height: 100%;
+  margin-left: 20px;
+}
+.homepage-navbar-logo .logo {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  margin-top: 2px;
+}
+
+.homepage-navbar-support {
+  width: 55%;
+  height: 100%;
+  margin-left: 10px;
+}
+
+.homepage-navbar-support-list {
+  display: flex;
+  margin-top: 10px;
+}
+.homepage-navbar-support-item {
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.homepage-navbar-support-item a {
+  color: #09ade9;
+}
+
+.homepage-navbar-support-item:hover {
+  transform: translateY(-2px);
+}
+
+.homepage-navbar-login-btn {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-navbar-login-btn .homepage-btn-login {
+  width: 150px;
+  padding: 10px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #09ade9;
+  box-shadow: 1.5px 1.5px 1.5px #bababa;
+  transition: all 0.3s ease-in-out;
+}
+
+.homepage-navbar-login-btn .homepage-btn-login:hover {
+  background-color: #02a3cb;
+  transform: translateY(-2px);
+}
+
+.homepage-navbar-register-btn {
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-navbar-register-btn .homepage-btn-register {
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #02d738;
+  box-shadow: 1.5px 1.5px 1.5px #bababa;
+  transition: all 0.3s ease-in-out;
+}
+
+.homepage-navbar-register-btn .homepage-btn-register:hover {
+  background-color: #01d135;
+  transform: translateY(-2px);
+}
+
+.homepage-illustration {
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+
+.homepage-illustration .bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.homepage-illustration .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bg-overlay {
+  position: absolute;
+  top: 15%;
+  left: 7%;
+  width: 45%;
+  height: 400px;
+  padding: 30px;
+  background-color: rgba(1, 1, 1, 0.25);
+  border-radius: 25px;
+  color: #fff;
+  box-shadow: -12px 12px 1px rgb(0, 0, 0, 0.4);
+}
+
+.bg-overlay-content-title h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.bg-overlay-content-title p {
+  width: 90%;
+  font-size: 20px;
+}
+
+.bg-overlay-content-buttons {
+  margin-top: 65px;
+  height: 50px;
+}
+
+.bg-overlay-content-buttons .homepage-btn-login {
+  width: 400px;
+  padding: 10px;
+  margin: 3px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-overlay-content-buttons .homepage-btn-login:hover {
+  transform: translateY(-2px);
+}
+
+.register-suport {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.register-suport .register-suport-overlay {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  background-color: #a3dffb;
+}
+
+.register-suport .register-suport-2 {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.register-suport .register-suport-2-context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-left: 50px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.register-suport .register-suport-2-img {
+  width: 60%;
+  height: 120%;
+  position: absolute;
+  right: 0;
+  top: 15%;
+}
+
+.register-suport .feature2 {
+  width: 70%;
+  height: 100%;
+  object-fit: contain;
+  margin-left: 20%;
+  box-shadow: 0px 1px 1px gray;
+}
+
+.register-suport .register-suport-1 {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.register-suport .register-suport-1-img {
+  width: 60%;
+  height: 120%;
+  top: -25%;
+  position: absolute;
+}
+
+.register-suport .feature1 {
+  width: 70%;
+  height: 100%;
+  object-fit: contain;
+  margin-left: 50px;
+  box-shadow: 0px -2px 2px gray;
+}
+
+.register-suport .register-suport-1-context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+}
+
+.register-suport .register-suport-1-context p {
+  width: 70%;
+  margin-right: 100px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f3f3f3;
+  color: rgb(0, 0, 0);
+  padding: 40px 0;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1500px;
+  margin-left: 150px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 300px;
+  margin: 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.footer-column p,
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #0e83ea; /* Màu xanh lá khi hover */
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .homepage-container {
+    width: 100%;
+    height: 100%;
+  }
+  .homepage-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+    height: 300px !important;
+  }
+  .homepage-navbar-logo {
+    width: 200px;
+  }
+  .homepage-navbar-register-btn {
+    width: 130px !important;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .homepage-navbar-support-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .homepage-illustration {
+    width: 100%;
+    height: 300px;
+  }
+
+  .bg-overlay {
+    width: 85%;
+    height: 250px;
+    margin-top: -30px;
+  }
+
+  .bg-overlay-content-title h1 {
+    width: 100%;
+    font-size: 20px;
+  }
+  .bg-overlay-content-title p {
+    width: 100%;
+    margin: -10px 0 10px 0;
+    font-size: 14px;
+  }
+
+  .bg-overlay-content-buttons {
+    margin: 5px 0 0 -10px;
+  }
+  .bg-overlay-content-buttons .homepage-btn-login {
+    width: 250px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .register-suport {
+    height: 600px;
+  }
+  .register-suport-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .register-suport-1-img {
+    width: 500px !important;
+    height: 180px !important;
+    margin-top: -20px;
+  }
+
+  .register-suport-1-context {
+    width: 400px !important;
+    height: 100px;
+    margin-top: 100px;
+  }
+
+  .register-suport-1-context p {
+    font-size: 20px !important;
+    width: 400px !important;
+    height: 100px;
+    margin-left: 20px;
+  }
+
+  .register-suport-2 {
+    position: relative;
+  }
+  .register-suport-2-img {
+    width: 500px !important;
+    height: 180px !important;
+    position: absolute;
+    top: 42% !important;
+    left: 0px;
+  }
+
+  .register-suport-2-context {
+    position: absolute;
+    width: 400px !important;
+  }
+
+  .register-suport-2-context p {
+    font-size: 20px !important;
+  }
+
+  .footer {
+    width: 100%;
+  }
+  .footer-container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .footer-column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

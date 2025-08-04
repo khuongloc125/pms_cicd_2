@@ -1,0 +1,238 @@
+.aboutus-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus-header {
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #3869bf 0%, #2a52be 100%);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.aboutus-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.aboutus-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.aboutus-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.aboutus-mission,
+.aboutus-vision,
+.aboutus-features,
+.aboutus-team {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutus-mission:hover,
+.aboutus-vision:hover,
+.aboutus-features:hover,
+.aboutus-team:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.aboutus-mission h2,
+.aboutus-vision h2,
+.aboutus-features h2,
+.aboutus-team h2 {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2a5298;
+  padding-bottom: 10px;
+}
+
+.aboutus-mission p,
+.aboutus-vision p,
+.aboutus-team p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.aboutus-features .feature-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.feature-card {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  color: #2a5298;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.aboutus-team .team-members {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.team-member {
+  text-align: center;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-avatar {
+  width: 100px;
+  height: 100px;
+  background: #e2e8f0;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+.team-member h4 {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .aboutus-container {
+    padding: 30px 15px;
+  }
+
+  .aboutus-header {
+    padding: 40px 0;
+  }
+
+  .aboutus-header h1 {
+    font-size: 2rem;
+  }
+
+  .aboutus-subtitle {
+    font-size: 1rem;
+  }
+
+  .aboutus-features .feature-cards {
+    flex-direction: column;
+  }
+
+  .aboutus-team .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus-header {
+    padding: 30px 0;
+  }
+
+  .aboutus-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .aboutus-mission,
+  .aboutus-vision,
+  .aboutus-features,
+  .aboutus-team {
+    padding: 20px;
+  }
+
+  .feature-card,
+  .team-member {
+    padding: 15px;
+  }
+
+  .feature-image {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutus-container {
+    padding: 20px 10px;
+  }
+
+  .aboutus-header {
+    padding: 20px 0;
+  }
+
+  .aboutus-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .aboutus-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .aboutus-mission h2,
+  .aboutus-vision h2,
+  .aboutus-features h2,
+  .aboutus-team h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card h3,
+  .team-member h4 {
+    font-size: 1.1rem;
+  }
+}

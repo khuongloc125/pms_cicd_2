@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+  - job_name: 'backend'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['backend:8080']
+  - job_name: 'frontend'
+    metrics_path: /metrics
+    fallback_scrape_protocol: PrometheusText0.0.4  # Xử lý nếu Content-Type có charset
+    static_configs:
+      - targets: ['frontend:80']
+  - job_name: 'mysql'
+    static_configs:
+      - targets: ['mysql-exporter:9104']

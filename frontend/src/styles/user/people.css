@@ -1,0 +1,686 @@
+/* People section - Enhanced Beautiful Design */
+.people-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Add Member Form */
+.add-people-form {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.add-people-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b5ae6 0%, #1b55f3 50%, #062af5 100%);
+}
+
+.add-people-form h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #1a202c 0%, #4a5568 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+.form-group-add-member {
+  display: flex;
+  width: auto;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.form-input,
+.form-select {
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.email-suggestions-add {
+  height: 180px;
+  overflow-y: scroll;
+  scrollbar-width: thin; /* "auto", "thin", "none" */
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.form-actions-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 270px;
+}
+
+.form-actions-inline .btn-primary {
+  background: #01b638;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-actions-inline .btn-primary:hover {
+  background: #00ac34;
+  box-shadow: 0 4px 12px rgba(2, 179, 81, 0.3);
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #cbd5e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-menu {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+/* People Container */
+.people-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* People Header */
+.people-header {
+  display: flex;
+  justify-content: space-between; /* Đảm bảo section-title nằm bên trái, nút nằm bên phải */
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+/* Section Title */
+.section-title {
+  flex: 1; /* Cho phép section-title chiếm không gian còn lại */
+}
+
+/* Add Member button */
+.add-member-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #4380e9 0%, #166be1 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-member-btn:hover {
+  background: linear-gradient(90deg, #2d55e7 0%, #142eef 100%);
+  box-shadow: 0 4px 8px rgba(30, 110, 239, 0.3);
+}
+
+.add-member-btn .btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* People List */
+.people-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Person Item */
+.person-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #f1f5f9;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.person-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #294ded 0%, #2260e7 50%, #065fee 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.person-item:hover::before {
+  transform: scaleX(1);
+}
+
+.person-item:hover {
+  border-color: #0b5cf2;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+}
+
+/* Person Info Section */
+.person-info-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Person Avatar */
+.person-avatar {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgb(92, 92, 92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+}
+
+.person-avatar::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  padding: 2px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.person-avatar img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Person Info */
+.person-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Person Name Section */
+.person-name-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+/* Person Name */
+.person-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+/* Role Icon */
+.role-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.role-lead {
+  color: #f6ad55;
+}
+
+.role-reviewer {
+  color: #4299e1;
+}
+
+.role-member {
+  color: #48bb78;
+}
+
+/* Person Contact */
+.person-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.person-contact svg {
+  width: 16px;
+  height: 16px;
+  color: #64748b;
+}
+
+/* Person Email */
+.person-email {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Person Stats */
+.person-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Person Task Stats */
+.person-task-stats {
+  text-align: center;
+  padding: 12px 16px;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 12px;
+  min-width: 80px;
+}
+
+/* Stat Value */
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+/* Stat Label */
+.stat-label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Person Role */
+.person-role {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid;
+}
+
+/* Role Lead */
+.role-lead {
+  background: rgba(246, 173, 85, 0.1);
+  color: #d69e2e;
+  border-color: rgba(246, 173, 85, 0.2);
+}
+
+/* Role Member */
+.role-member {
+  background: rgba(72, 187, 120, 0.1);
+  color: #38a169;
+  border-color: rgba(72, 187, 120, 0.2);
+}
+
+/* Role Reviewer */
+.role-reviewer {
+  background: rgba(66, 153, 225, 0.1);
+  color: #3182ce;
+  border-color: rgba(66, 153, 225, 0.2);
+}
+
+/* Person Actions */
+.person-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Person Action Button */
+.person-action-btn {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  color: #667eea;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Person Action Button Hover */
+.person-action-btn:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: scale(1.1);
+}
+
+/* Person Action Button SVG */
+.person-action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* People Summary */
+.people-summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+/* Role Distribution */
+.role-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Role Item */
+.role-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Role Item Hover */
+.role-item:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateX(5px);
+}
+
+/* Role Info */
+.role-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Role Label */
+.role-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+/* Role Count */
+.role-count {
+  font-size: 16px;
+  font-weight: 700;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Activity Item */
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #f1f5f9;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Activity Item Hover */
+.activity-item:hover {
+  border-color: #e2e8f0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Activity Icon */
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Activity Success */
+.activity-success {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+/* Activity Primary */
+.activity-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Activity Icon SVG */
+.activity-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Activity Details */
+.activity-details {
+  flex: 1;
+}
+
+/* Activity Title */
+.activity-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+/* Activity Time */
+.activity-time {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  /* Layout adjustments */
+  .sidebar {
+    position: fixed;
+    left: -320px;
+    z-index: 999;
+    height: 100vh;
+    top: 70px;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 320px;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .content {
+    margin-left: 0;
+    border-radius: 0;
+  }
+
+  /* People adjustments */
+  .people-summary {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-actions-inline {
+    justify-content: center;
+  }
+
+  .person-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .person-stats {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+
+  .person-actions {
+    align-self: flex-end;
+  }
+
+  /* Add People Form adjustments */
+  .add-people-form {
+    padding: 20px;
+  }
+  .add-people-form .form-row {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  /* Adjust people-header for mobile */
+  .people-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .add-member-btn {
+    width: 100%; /* Nút chiếm toàn bộ chiều rộng trên mobile */
+    justify-content: center; /* Căn giữa nội dung nút */
+  }
+  .email-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .email-chip {
+    display: flex;
+    align-items: center;
+    background: #e0e0e0;
+    border-radius: 16px;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .email-chip button {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* People adjustments */
+  .add-people-form,
+  .people-container {
+    padding: 20px;
+  }
+
+  .person-info-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .person-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .person-name {
+    font-size: 16px;
+  }
+
+  .person-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  /* Adjust people-header for small mobile */
+  .people-header {
+    gap: 10px;
+  }
+
+  .add-member-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .add-people-form,
+  .people-container {
+    padding: 15px;
+  }
+
+  .add-member-btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+}

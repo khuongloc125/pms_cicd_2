@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-color: #0349fa;
+  display: none;
+  z-index: 1000;
+
+  animation: progressAnimation 1.5s linear infinite;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.register-home {
+  display: flex;
+  width: 100%;
+  height: 85vh;
+}
+
+.register-home-1 {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-home-1-content {
+  width: 94%;
+  height: 150px;
+  margin: -50px 0 -20px 15px;
+}
+
+.register-home-1-content-title {
+  font-size: 30px;
+  color: #009dc4;
+  width: 100%;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.register-home-1 .register-home-1-content-example {
+  width: 100%;
+  margin-top: 80px;
+  height: 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-home-1 .register-home-1-content-example .example {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  object-fit: cover;
+}
+
+.register-home-2 {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.register-form-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.register-form {
+  width: 90%;
+}
+.register-form .register-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.register-form .register-input .input-group-register {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  flex-direction: column;
+}
+
+.register-form .register-input .input-group-register input {
+  width: 90%;
+  height: 30px;
+  padding: 22px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #085edf;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 17px;
+}
+
+.register-form .register-input .input-group-register label {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-75%) !important;
+  color: #515151 !important;
+  font-size: 16px;
+  padding: 0 10px;
+  background-color: #ffffff;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.register-form .register-input .input-group-register:focus-within label,
+.register-form
+  .register-input
+  .input-group-register
+  input:not(:placeholder-shown)
+  ~ label,
+.register-form .register-input .input-group-register input:valid ~ label {
+  margin-top: -23px !important;
+  font-size: 15px;
+  margin-left: 0px;
+  color: #050505 !important;
+  transform: translateY(-50%);
+}
+
+.register-form
+  .register-input
+  .input-group-register
+  input:not(:focus):not(:valid):placeholder-shown
+  ~ label {
+  top: 50%;
+  font-size: 16px;
+  color: #085edf;
+  transform: translateY(-50%);
+}
+
+.register-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+}
+
+.register-button .btn-register {
+  width: 90%;
+  height: 45px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: #03c83b;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button .btn-register:hover {
+  background-color: #03bf1c;
+  transform: translateY(-2px);
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 32px;
+  color: #0c7ae7;
+}
+
+.login a {
+  text-decoration: none;
+  color: #0c7ae7;
+}
+.login a:hover {
+  text-decoration: underline;
+}
+
+/* Thêm style cho lỗi đỏ */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0 0 0px;
+  text-align: left;
+}
+
+/* Thêm hiệu ứng shake */
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.input-group-register.shake {
+  animation: shake 0.1s;
+}
+
+/* Thêm style cho thông báo thành công */
+.success-message {
+  color: green;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e0ffe0;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .homepage-navbar-login-btn {
+    width: 130px !important;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .register-home-1 {
+    display: none;
+    width: 0;
+  }
+  .register-home-2 {
+    width: 100%;
+  }
+
+  .register-home-1-content-title {
+    width: 100%;
+    margin-left: 0px;
+    padding: 3px 3px;
+  }
+  .register-form {
+    width: 100%;
+  }
+  .register-home-1-content-title p {
+    font-size: 24px;
+  }
+}

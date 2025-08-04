@@ -1,0 +1,65 @@
+/* Tabs */
+.tabs {
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.tab {
+  padding: 6px 10px;
+  margin-right: 5px;
+  margin-top: 2px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  color: #6b7280;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.tab:hover,
+.tab:focus {
+  color: #3b82f6; /* Blue color on hover and focus */
+  border-bottom: 3px solid #3b82f6; /* Blue border on hover and focus */
+}
+
+.tab.active {
+  color: #3b82f6; /* Blue color for active tab */
+  border-bottom: 3px solid #3b82f6; /* Blue border for active tab */
+}
+
+/* Tab icon */
+.tab-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+/* Specific icon colors for each tab */
+.tab#summary .tab-icon,
+.tab#backlog .tab-icon,
+.tab#board .tab-icon,
+.tab#timeline .tab-icon,
+.tab#documents .tab-icon,
+.tab#people .tab-icon {
+  background-color: transparent;
+}
+.tab-content {
+  padding: 0 20px 20px; /* Remove top padding to align with tabs */
+}
+@media (max-width: 768px) {
+  .tabs {
+    width: 450px;
+    overflow-x: scroll;
+    scrollbar-width: thin; /* "auto", "thin", "none" */
+    scrollbar-color: #888 #f1f1f1;
+  }
+}
