@@ -17,7 +17,7 @@ public interface ProjectMapper {
     @Mapping(target = "short_name", ignore = true)
     @Mapping(target = "created_by_id", ignore = true)
     @Mapping(target = "created_by_name", ignore = true) 
-    @Mapping(target = "leader", ignore = true) // Được xử lý trong service
+    @Mapping(target = "leader", ignore = true)
     @Mapping(target = "start_date", source = "start_date")
     @Mapping(target = "end_date", source = "end_date")
     @Mapping(target = "status", constant = "ACTIVE") // Đặt trạng thái mặc định là ACTIVE
